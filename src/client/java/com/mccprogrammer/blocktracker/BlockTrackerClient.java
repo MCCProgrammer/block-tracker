@@ -63,7 +63,7 @@ public class BlockTrackerClient implements ClientModInitializer {
         refreshKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 KEY_REFRESH,
                 InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_K, // User didn't specify, I'll use K for 'Klean' or 'Re-Kontar'
+                GLFW.GLFW_KEY_K,
                 KeyBinding.Category.MISC));
 
         // Register HUD Renderer
@@ -95,7 +95,7 @@ public class BlockTrackerClient implements ClientModInitializer {
             // Handle Refresh Key (K)
             while (refreshKey.wasPressed()) {
                 forceScan(client);
-                client.player.sendMessage(Text.literal("§aRadar e blocos atualizados!"), true);
+                client.player.sendMessage(Text.literal("§aRadar and blocks refreshed!"), true);
             }
 
             // Auto-scan every 20 ticks (1 second)

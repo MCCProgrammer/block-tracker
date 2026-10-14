@@ -15,7 +15,7 @@ public class PlayerListScreen extends Screen {
     private int totalContentHeight = 0;
 
     public PlayerListScreen() {
-        super(Text.literal("Menu de Jogadores"));
+        super(Text.literal("Players"));
     }
 
     @Override
@@ -37,8 +37,8 @@ public class PlayerListScreen extends Screen {
                 continue;
 
             String relation = state.playerRelations.getOrDefault(name, "neutral");
-            String statusText = "neutral".equals(relation) ? "Neutro"
-                    : ("friend".equals(relation) ? "Amigo" : "Inimigo");
+            String statusText = "neutral".equals(relation) ? "Neutral"
+                    : ("friend".equals(relation) ? "Friend" : "Enemy");
 
             // Status Toggle Button
             ButtonWidget btn = ButtonWidget.builder(
@@ -66,9 +66,9 @@ public class PlayerListScreen extends Screen {
 
         totalContentHeight = y;
 
-        // Botão Voltar (Fixed at bottom)
+        // Back button (fixed at the bottom)
         this.addDrawableChild(ButtonWidget.builder(
-                Text.literal("Voltar"),
+                Text.literal("Back"),
                 button -> this.close())
                 .dimensions(centerX - 50, this.height - 30, 100, 20)
                 .build());
@@ -140,7 +140,7 @@ public class PlayerListScreen extends Screen {
 
             context.disableScissor();
 
-            // Ensure "Voltar" is always visible and above scissor
+            // Ensure "Back" is always visible and above scissor
             for (net.minecraft.client.gui.Element child : this.children()) {
                 if (child instanceof net.minecraft.client.gui.widget.ClickableWidget btn && btn.getWidth() == 100) {
                     btn.setY(this.height - 30);

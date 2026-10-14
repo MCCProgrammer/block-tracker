@@ -3,13 +3,13 @@
 	"id": "block-tracker",
 	"version": "${version}",
 	"name": "Block Tracker",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Finds chests, shulker boxes, spawners and enchanting tables around you, with a HUD, a block list and a radar that marks players as friends or enemies.",
 	"authors": [
-		"Me!"
+		"Miguel Carmo"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/MCCProgrammer/block-tracker",
+		"sources": "https://github.com/MCCProgrammer/block-tracker"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/block-tracker/icon.png",
